@@ -1,4 +1,5 @@
 import React from 'react'
+import Search from './search';
 
 function Header() {
     return (
@@ -7,6 +8,7 @@ function Header() {
                 <div className='header-Container-left'>
                     <h1> Home </h1>
                 </div>
+                <Search />
 
                 <div className='header-Container-Right'>
                     <h1> Contact Us </h1>
