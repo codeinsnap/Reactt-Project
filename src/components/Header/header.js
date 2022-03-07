@@ -1,20 +1,20 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import Search from './search';
+import "./header.css"
 
 function Header() {
     return (
         <div className="header-Title"> 
             <div className='header-Container'>
                 <div className='header-Container-left'>
-                    <h1> Home </h1>
+                    <Link to='/'><button className="home-btn"> Home </button></Link>
                 </div>
                 <Search />
 
                 <div className='header-Container-Right'>
-                    <h1> Contact Us </h1>
-                    <h1> Login </h1>
-                    <h1> Projects </h1>
-                    <h1> Profile  </h1>
+                    <Link to='/AboutUs'><button className="home-btn"> About Us </button></Link>
+                    <Link to='/login'><button className="home-btn"> Login </button></Link>
                 </div>
             </div>
         </div>

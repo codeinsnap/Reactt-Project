@@ -1,10 +1,11 @@
 import React from 'react'
+import './footer.css'
 
 function Footer() {
     return (
         <div className="footer-container"> 
             <div className="footer-block">
-                <div className='footer-left-block'>
+                <div className='footer-right-block'>
                     <h1> Home </h1>
                 </div>
 
