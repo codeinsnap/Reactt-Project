@@ -4,7 +4,7 @@ import React from 'react'
 function Search () {
   return (
     <div>
-    <img src='src\assests\Icons\searchIcon.png' alt="search" />
+    <img  alt="search" />
     <input 
         type="text"
         placeholder="Search..."
