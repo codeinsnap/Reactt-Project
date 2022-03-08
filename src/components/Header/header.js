@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Search from './search';
 import "./header.css"
 
+
 function Header() {
     return (
         <div className="header-Title"> 
@@ -11,7 +12,6 @@ function Header() {
                     <Link to='/'><button className="home-btn"> Home </button></Link>
                 </div>
                 <Search />
-
                 <div className='header-Container-Right'>
                     <Link to='/AboutUs'><button className="home-btn"> About Us </button></Link>
                     <Link to='/login'><button className="home-btn"> Login </button></Link>
