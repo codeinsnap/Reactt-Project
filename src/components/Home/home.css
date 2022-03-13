@@ -1,0 +1,12 @@
+.wrapper{
+    background-color: black;
+    color: white;
+}
+
+.video{
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    left: 0;
+    right: 0;
+}
