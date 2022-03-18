@@ -12,16 +12,16 @@ function Home(){
       <div className='wrapper'>
         <div className='wrapper-container'>
           <div className='warpper-upper-section'> 
-            <img src={Rectangle} />
-            <section className='wrapper-title'>
+            <div className='wrapper-title'>
                 <span> Shoe </span>
                 <span> Brand </span>
-            </section>
-            <section className='wrapper-nav-bar'>
+            </div>
+            <div className='wrapper-nav-bar'>
                 <span> HOME </span>
                 <span> SNEAKERS </span>
                 <span> PLAYERS </span>
-            </section>
+            </div>
+            <img src={Rectangle} className='image1'/>
           </div>
           <div className='wrapper-second-container'> 
           <section className='second-container'>
