@@ -5,7 +5,7 @@
 }
 
 .image1{
-    border-radius: 45% 0% 0% 45%;
+    border-radius: 0% 0% 0% 45%;
     z-index: -1;
     margin-top: -5%;
 }
@@ -15,6 +15,10 @@
     margin-top: 2%;
     font-size: 150%;
     height: 0%;
+}
+
+.wrapper-title .second-title{
+    color: red;
 }
 
 .wrapper-title:hover{
@@ -50,4 +54,60 @@
     height: 0%;
     margin-right: 8%;
     
+}
+
+.wrapper-second-container{
+    text-align: left;
+    display: block;
+    width: 30%;
+    margin-top: -28%;
+    margin-left: 15%;
+    padding-bottom: 11%;
+}
+
+.wrapper-second-container span{
+    display: block;
+    font-size: 410%;
+    font-weight: 700;
+    
+}
+
+.wrapper-second-container .second-title{
+    font-size: 150%;
+    color: gray;
+    width: 80%;
+    font-weight: 100;
+}
+
+.wrapper-third-container{
+    margin-left: 14%;
+    width: 65%;
+    height: auto;
+}
+
+.third-container{
+    margin-top: 16%;
+    text-align: right;
+    display: flex;
+}
+
+.third-container span{
+    display: block;
+}
+
+.third-container .textdiv{
+    width: 100%;
+    margin-left: 27%;
+    margin-top: 7%;
+    padding-right: 4%;
+}
+
+.secondImg{
+    width: 46%;
+    margin-left: 8%;
+}
+
+.heading{
+    font-weight: 700;
+    font-size: 150%;
 }

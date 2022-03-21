@@ -14,7 +14,7 @@ function Home(){
           <div className='warpper-upper-section'> 
             <div className='wrapper-title'>
                 <span> Shoe </span>
-                <span> Brand </span>
+                <span className='second-title'> Brand </span>
             </div>
             <div className='wrapper-nav-bar'>
                 <span> HOME </span>
@@ -24,36 +24,38 @@ function Home(){
             <img src={Rectangle} className='image1'/>
           </div>
           <div className='wrapper-second-container'> 
-          <section className='second-container'>
-          <span>Regain your</span>
-          <span>confidence on the</span>
-          <span>court</span>
-          <span>A shoe bulit with purpose and to take your game to the next level.</span>
-          <img className='secondImg' src={shoes2} alt="shoes" />
-          </section>
+              <span>Regain your</span>
+              <span>confidence on the</span>
+              <span>court</span>
+              <span className='second-title'>A shoe bulit with purpose and to take your game to the next level.</span>
           </div>
         </div>
+
           <div className='wrapper-third-container'>
+
             <div className='third-container'>
-                <section className='container'>
-                    <span>Lightweight</span>
+                  <div className='textdiv'>
+                    <span className='heading'>Lightweight</span>
                     <span>upper mesh material provides proper ventilation and reduction in the weight of the shoes.</span>
-                </section> 
-                <img className='thirdImg' src={shoes3} alt="shoes" />
+                  </div>
+                    <img className='secondImg' src={shoes2} alt="shoes" />
             </div>
+
             <div className='wrapper-fourth-container'>
-                <section className='fourt-container'>
-                    <span>Flexibility</span>
+                
+                <img className='smallImg' src={shoes3} alt="shoes" />
+                  <div>
+                    <span className='heading'>Flexibility</span>
                     <span>Soft, flexible soles will allow the walker to push off easily with each step</span>
-                </section>
-                <img className='fourthImg' src={shoes4} alt="shoes" />
+                    </div>
             </div>
+
             <div className='wrapper-fifth-container'>
-                <section className='fifth-container'>
-                    <span>Durability</span>
+                    <div>
+                    <span className='heading'>Durability</span>
                     <span>Lightweight, woven material is durable and provide structure and support</span>
-                </section>
-                <img className='fifthImg' src={shoes4} alt="shoes" />
+                    </div>
+                <img className='smallImg' src={shoes4} alt="shoes" />
             </div>
           </div>
       </div> 
