@@ -6,6 +6,7 @@ import Rectangle from '../../assests/Icons/Rectangle.jpg';
 import shoes2 from '../../assests/Icons/shoes2.png'
 import shoes3 from '../../assests/Icons/shoes3.png'
 import shoes4 from '../../assests/Icons/shoes4.png'
+import { Link } from 'react-router-dom';
 
 function Home(){
     return(
@@ -19,7 +20,7 @@ function Home(){
             <div className='wrapper-nav-bar'>
                 <span> HOME </span>
                 <span> SNEAKERS </span>
-                <span> PLAYERS </span>
+                <Link to = "/aboutus" ><span> About Us </span></Link>
             </div>
             <img src={Rectangle} className='image1'/>
           </div>
