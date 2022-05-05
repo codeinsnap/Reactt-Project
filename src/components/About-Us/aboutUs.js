@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useTransition, animated } from "react-spring";
-import { easeQuadIn, easeQuadOut } from "d3-ease";
 import "./aboutUs.css";
 
 let useClickOutside = (handler) => {
@@ -25,26 +23,13 @@ let useClickOutside = (handler) => {
 
 function App() {
   let [isOpen, setIsOpen] = useState(false);
-
-//   let transitions = useTransition(isOpen, null, {
-//     from: { opacity: 0, transform: "scale(0.95)" },
-//     enter: { opacity: 1, transform: "scale(1)" },
-//     leave: { opacity: 0, transform: "scale(0.95)" },
-//     config: (item, state) => ({
-//       easing: state === "leave" ? easeQuadIn : easeQuadOut,
-//       duration: state === "leave" ? 75 : 100,
-//     }),
-//   });
-
   let domNode = useClickOutside(() => {
     setIsOpen(false);
   });
-console.log("checking", isOpen)
 
   return (
     <div className="flex items-center justify-center mt-24">
       <div ref={domNode} className="relative inline-block text-left">
-      {/* <div className="relative inline-block text-left"> */}
         <div>
           <span className="rounded-md shadow-sm">
             <button
@@ -53,28 +38,9 @@ console.log("checking", isOpen)
               className="inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition ease-in-out duration-150"
             >
               Options
-              <svg
-                className="-mr-1 ml-2 h-5 w-5"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
             </button>
           </span>
         </div>
-        {/* {transitions.map(
-          ({ item, key, props }) =>
-            item && (
-              <animated.div
-                style={props}
-                key={key}
-                className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg"
-              > */}
                 <div className="rounded-md bg-white shadow-xs">
                   <div className="py-1">
                     <button className="group w-full flex items-center px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900">
@@ -184,9 +150,7 @@ console.log("checking", isOpen)
                     </button>
                   </div>
                 </div>
-              {/* </animated.div>
-            )
-        )} */}
+              
       </div>
     </div>
   );
