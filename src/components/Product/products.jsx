@@ -7,7 +7,10 @@ const Products = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
   const [loading, setLoading] = useState(false);
+  // const [ loadMore , setLoadMore] = useState(10)
   let componentMounted = true;
+
+  // console.log(filter.length)
 
   useEffect(() => {
     const getProducts = async () => {
@@ -29,6 +32,15 @@ const Products = () => {
     const updateList = data.filter((x) => x.category === cat);
     setFilter(updateList);
   };
+
+  // const handleShowMore=()=>{
+  //   setLoadMore( loadMore + 10)
+  // }
+
+  // const handleShowLess=()=>{
+  //   setLoadMore( loadMore - 10 )
+  // }
+
   const ShowProducts = () => {
     return (
       <>
@@ -63,8 +75,7 @@ const Products = () => {
             className="btn btn-outline-light me-2"
             onClick={() => filterProducts("electronics")}
           >
-            {" "}
-            Electronics{" "}
+            Electronics
           </button>
         </div>
 
@@ -117,7 +128,7 @@ const Products = () => {
 
           {loading ? (
             <Loading
-              color="dark"
+              color="white"
               type="spinningBubbles"
               height={100}
               width={100}
@@ -125,6 +136,10 @@ const Products = () => {
           ) : (
             <ShowProducts />
           )}
+
+          {/* {
+            loadMore > 10 ? <button onClick={()=> handleShowLess()}> Show Less </button> : <button onClick={()=> handleShowMore()}> Show More </button>
+          } */}
         </div>
       </div>
     </div>

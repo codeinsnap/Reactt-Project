@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import Loading from 'react-loading';
-import { addCart } from '../../Redux/Action';
+import { addCart , saveToCart } from '../../Redux/Action';
 
 const Product = ()=> {
 
@@ -12,7 +12,9 @@ const Product = ()=> {
     const dispatch = useDispatch();
 
     const addProduct = (product) => {
-        dispatch(addCart(product));
+      console.log("product" , product)
+        dispatch(addCart(product)); 
+        dispatch(saveToCart(product)); 
     }
 
     useEffect(() => {
