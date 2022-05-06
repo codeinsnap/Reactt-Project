@@ -13,3 +13,10 @@ export const delCart =(product)=> {
         payload : product
     }
 }
+export const saveToCart = (product) => {
+    console.log("reques received " , product)
+    return{
+        type : "SAVE_TO_CART",
+        payload : product
+    }
+}

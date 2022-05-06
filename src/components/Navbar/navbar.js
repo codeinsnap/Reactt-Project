@@ -1,12 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
-  return(
+  const state = useSelector((state) => state.handleCart);
+
+  const handleScroll = () => {
+    setTimeout(() => {
+      window.scrollTo(0, 1000);
+    }, 1000);
+  };
+  return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
         <div className="container">
-          <Link className="navbar-brand fw-bold fs-4" to='/'>
+          <Link className="navbar-brand fw-bold fs-4" to="/">
             LA COLLECTION
           </Link>
           <button
@@ -27,8 +35,12 @@ const Navbar = () => {
                   Home
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="products">
+              <li className="nav-item" onClick={() => handleScroll()}>
+                <Link
+                  className="nav-link"
+                  onClick={() => handleScroll()}
+                  to="/"
+                >
                   Products
                 </Link>
               </li>
@@ -42,19 +54,18 @@ const Navbar = () => {
                   Contact
                 </Link>
               </li>
-
-
             </ul>
             <div className="buttons">
-                <Link to="login" className="btn btn-outline-dark">
-                    <i className="fa fa-sign-in me-2"></i>Login
-                </Link>
-                <Link to="registor" className="btn btn-outline-dark ms-2">
-                    <i className="fa fa-user-plus me-2"></i>Registor
-                </Link>
-                <Link to="cart" className="btn btn-outline-dark ms-2">
-                    <i className="fa fa-shopping-cart me-2"></i>Cart (0)
-                </Link>
+              <Link to="login" className="btn btn-outline-dark">
+                <i className="fa fa-sign-in me-2"></i>Login
+              </Link>
+              <Link to="registor" className="btn btn-outline-dark ms-2">
+                <i className="fa fa-user-plus me-2"></i>Registor
+              </Link>
+              <Link to="cart" className="btn btn-outline-dark ms-2">
+                <i className="fa fa-shopping-cart me-2"></i>Cart ({state.length}
+                )
+              </Link>
             </div>
           </div>
         </div>
