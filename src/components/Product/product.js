@@ -12,9 +12,9 @@ const Product = ()=> {
     const dispatch = useDispatch();
 
     const addProduct = (product) => {
-      console.log("product" , product)
         dispatch(addCart(product)); 
         dispatch(saveToCart(product)); 
+        window.scrollTo(0,0)
     }
 
     useEffect(() => {
@@ -26,8 +26,6 @@ const Product = ()=> {
       }
       getProduct();
     }, []);
-
-    
       const ShowProduct = () => {
         return (
           <>
@@ -42,11 +40,9 @@ const Product = ()=> {
                     <i className='fa fa-star'></i></p>
                     <h3 className='display-3 fw-bold my-4'>${product.price}</h3>
                     <p className='lead'>{product.description}</p>
-                    <button className='btn btn-outline-dark px-4 py-2' onClick={()=> addProduct(product)}> Add to Cart</button>
+                    <button className='btn btn-outline-dark px-4 py-2' onClick={()=>addProduct(product)}> Add to Cart</button>
                     <Link  to='/cart'className='btn btn-dark ms-2 px-3 py-2'> Go to Cart</Link>
-
             </div>
-           
           </>
         );
       };
@@ -54,7 +50,7 @@ const Product = ()=> {
         <>
         <div className='container py-5'>
             <div className='row py-4'>
-                {loading ? <Loading color='dark' type='spinningBubbles' height={100} width={100}/> : <ShowProduct/>}
+                {loading ? <div className='loadingdiv'><Loading color='dark' type='spinningBubbles' height={100} width={100}/></div> : <ShowProduct/>}
             </div>
 
         </div>

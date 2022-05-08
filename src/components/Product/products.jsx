@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Loading from "react-loading";
-import Skeleton from "react-loading-skeleton";
 import { Link } from "react-router-dom";
+import './product.css'
 
 const Products = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
   const [loading, setLoading] = useState(false);
-  // const [ loadMore , setLoadMore] = useState(10)
   let componentMounted = true;
-
-  // console.log(filter.length)
 
   useEffect(() => {
     const getProducts = async () => {
@@ -33,14 +30,6 @@ const Products = () => {
     setFilter(updateList);
   };
 
-  // const handleShowMore=()=>{
-  //   setLoadMore( loadMore + 10)
-  // }
-
-  // const handleShowLess=()=>{
-  //   setLoadMore( loadMore - 10 )
-  // }
-
   const ShowProducts = () => {
     return (
       <>
@@ -49,8 +38,7 @@ const Products = () => {
             className="btn btn-outline-light me-2"
             onClick={() => setFilter(data)}
           >
-            {" "}
-            All{" "}
+            All
           </button>
           <button
             className="btn btn-outline-light me-2"
@@ -68,8 +56,8 @@ const Products = () => {
             className="btn btn-outline-light me-2"
             onClick={() => filterProducts("jewelery")}
           >
-            {" "}
-            Jwelery{" "}
+            
+            Jwelery
           </button>
           <button
             className="btn btn-outline-light me-2"
@@ -127,19 +115,17 @@ const Products = () => {
           </div>
 
           {loading ? (
+            <div className='loadingdiv'>
             <Loading
               color="white"
               type="spinningBubbles"
               height={100}
               width={100}
             />
+            </div>
           ) : (
             <ShowProducts />
           )}
-
-          {/* {
-            loadMore > 10 ? <button onClick={()=> handleShowLess()}> Show Less </button> : <button onClick={()=> handleShowMore()}> Show More </button>
-          } */}
         </div>
       </div>
     </div>

@@ -1,30 +1,51 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React from "react";
+import { useSelector } from "react-redux";
 
 const Cart = () => {
-    const product = useSelector((state) => state.handleCart)
-    return(
-        <>
-        <div className='row'>
-        <div className='col-md-4'>
-            <img src={product.image} alt={product.title} height='200px' width='180px' />
-        </div>
-        <div className='col-md-4'>
-            <h3>{product.title}</h3>
-            <p className='lead fw-bold'>
-            {product.qty} X ${product.price} = $ {product.qty * product.price}
-            </p>
-            <button className='btn btn-outline-dark me-4' onClick={()=> handleButton(product)}>
-                <i className='fa fa-minus'></i>
-            </button>
-            <button className='btn btn-outline-dark' onClick={()=> handleButton(product)}>
-                <i className='fa fa-plus'></i>
-            </button>
-        </div>
-    </div>
+  const product = useSelector((state) => state.handleAddToCart);
+ 
+  return (
+    <>
+      {product.length > 0  ? product.map((products , key) => {
+        
+        return (
+          <>
+            <div className="row py-5">
+              <div className="col-md-4">
+                <img
+                  src={products.image}
+                  alt={products.title}
+                  height="200px"
+                  width="180px"
+                />
+              </div>
+              <div className="col-md-4">
+                <h3>{products.title}</h3>
+                <p className="lead fw-bold">
+                  {products.qty} X ${products.price} = ${" "}
+                  {products.qty * products.price}
+                </p>
+                {/* <button
+                  className="btn btn-outline-dark me-4"
+                  onClick={() => handleButton(products.qty)}
+                >
+                  <i className="fa fa-minus"></i>
+                </button>
+                <button
+                  className="btn btn-outline-dark"
+                  onClick={() => handleButton(products)}
+                >
+                  <i className="fa fa-plus"></i>
+                </button> */}
+              </div>
+            </div>
+          </>
+        );
+      }) : <div>
+            <h1> Your Cart Empty </h1>
+      </div> }
+    </>
+  );
+};
 
-        </>
-    )
-}
-
-export default Cart
+export default Cart;
