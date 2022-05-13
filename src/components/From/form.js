@@ -12,12 +12,12 @@ const SignInForm = () => {
           </label>
           <input
             type="text"
-            class="form-control is-valid"
+            class="form-control "
             id="validationServer01"
-            value="Mark"
+            placeholder="First Name"
             required
           />
-          <div class="valid-feedback">Looks good!</div>
+          {/* <div class="valid-feedback">Looks good!</div> */}
         </div>
         <div class="col-md-4">
           <label for="validationServer02" class="form-label">
@@ -25,12 +25,12 @@ const SignInForm = () => {
           </label>
           <input
             type="text"
-            class="form-control is-valid"
+            class="form-control"
             id="validationServer02"
-            value="Otto"
+            placeholder="Last Name"
             required
           />
-          <div class="valid-feedback">Looks good!</div>
+          {/* <div class="valid-feedback">Looks good!</div> */}
         </div>
         <div class="col-md-4">
           <label for="validationServerUsername" class="form-label">
@@ -42,14 +42,15 @@ const SignInForm = () => {
             </span>
             <input
               type="text"
-              class="form-control is-invalid"
+              class="form-control"
               id="validationServerUsername"
               aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback"
+              placeholder="User Name"
               required
             />
-            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+            {/* <div id="validationServerUsernameFeedback" class="invalid-feedback">
               Please choose a username.
-            </div>
+            </div> */}
           </div>
         </div>
         <div class="col-md-6">
@@ -58,21 +59,22 @@ const SignInForm = () => {
           </label>
           <input
             type="text"
-            class="form-control is-invalid"
+            class="form-control"
+            placeholder="City"
             id="validationServer03"
             aria-describedby="validationServer03Feedback"
             required
           />
-          <div id="validationServer03Feedback" class="invalid-feedback">
+          {/* <div id="validationServer03Feedback" class="invalid-feedback">
             Please provide a valid city.
-          </div>
+          </div> */}
         </div>
         <div class="col-md-3">
           <label for="validationServer04" class="form-label">
             State
           </label>
           <select
-            class="form-select is-invalid"
+            class="form-select"
             id="validationServer04"
             aria-describedby="validationServer04Feedback"
             required
@@ -82,9 +84,9 @@ const SignInForm = () => {
             </option>
             <option>...</option>
           </select>
-          <div id="validationServer04Feedback" class="invalid-feedback">
+          {/* <div id="validationServer04Feedback" class="invalid-feedback">
             Please select a valid state.
-          </div>
+          </div> */}
         </div>
         <div class="col-md-3">
           <label for="validationServer05" class="form-label">
@@ -92,29 +94,30 @@ const SignInForm = () => {
           </label>
           <input
             type="text"
-            class="form-control is-invalid"
+            class="form-control"
             id="validationServer05"
+            placeholder="Zip Code"
             aria-describedby="validationServer05Feedback"
             required
           />
-          <div id="validationServer05Feedback" class="invalid-feedback">
+          {/* <div id="validationServer05Feedback" class="invalid-feedback">
             Please provide a valid zip.
-          </div>
+          </div> */}
         </div>
         <div class="col-12">
           <div class="form-check">
             <input
-              class="form-check-input is-invalid"
+              class="form-check-input"
               type="checkbox"
               value=""
               id="invalidCheck3"
               aria-describedby="invalidCheck3Feedback"
               required
             />
-            <label class="form-check-label" for="invalidCheck3">
+            {/* <label class="form-check-label" for="invalidCheck3">
               Agree to terms and conditions
-            </label>
-            <div id="invalidCheck3Feedback" class="invalid-feedback">
+            </label> */}
+            <div id="invalidCheck3Feedback" class="feedback">
               You must agree before submitting.
             </div>
           </div>
